@@ -48,7 +48,7 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 ### HTML
 
-- [Jade](http://jade-lang.com/) for some templating.
+- (https://html.com) for templating.
 
 ### Typescript
 - [YARN] (https://yarnpkg.com/)
