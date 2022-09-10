@@ -19,6 +19,15 @@ $ yarn run build
 
 Run `yarn start` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
+## Update sources
+
+Some packages usages might change so you should run `npm prune` & `npm install` often.
+A common way to update is by doing
+
+$ git pull
+$ yarn prune
+$ yarn install
+    
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
@@ -34,6 +43,18 @@ Run `yarn run test` to execute the unit tests via [Karma](https://karma-runner.g
 ## Running end-to-end tests
 
 Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+
+## Languages & tools
+
+### HTML
+
+- [Jade](http://jade-lang.com/) for some templating.
+
+### Typescript
+- [YARN] (https://yarnpkg.com/)
+- [SASS] (https://sass-lang.com/)
+- [Angular] (https://angular.io/cli) 
+- [Bootstrap] (https://getbootstrap.com/) is used for UI
 
 ## Further help
 
