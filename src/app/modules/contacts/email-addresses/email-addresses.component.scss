@@ -1,0 +1,80 @@
+// contact.component.scss
+
+@import '../../../../scss/variables';
+
+.content {
+    padding-top: 100px;
+
+    /*
+   *  ==============================
+   *  Here we are using styles for displaying customer details
+   *  ==============================
+   */
+    .customer {
+        button {
+            border: 1px solid $button-color;
+            background: $button-color;
+            border-radius: 10px;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 122px;
+            height: 42px;
+
+            span {
+                font-weight: 700;
+                font-size: 16px;
+                color: $white;
+                margin-left: 10px;
+            }
+        }
+
+        .username {
+            font-weight: 700;
+            font-size: 20px;
+            color: $title-color;
+        }
+
+        .userrole {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 21px;
+            color: $primary-color;
+        }
+
+        .title {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 21px;
+            color: $primary-color;
+            padding-right: 30px;
+            text-align: right;
+        }
+
+        .description {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 21px;
+            color: $title-color;
+        }
+
+        .label {
+            background: $secondary-color;
+            border-radius: 8px;
+            padding: 5px 12px 5px 12px;
+            height: 28px;
+            width: 76px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            span {
+                font-weight: 700;
+                font-size: 14px;
+                text-align: center;
+                color: $primary-color;
+            }
+        }
+    }
+}

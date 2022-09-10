@@ -1,0 +1,42 @@
+<div class="contact-page">
+  <div class="row">
+    <div class="col-5">
+      <!-- 
+      *  ==============================
+      *  We are showing the customer's left sidebar
+      *  ==============================
+       -->
+      <app-customer-siderbar
+        [customers]="customers"
+        (editCustomer)="handleViewCustomer($event)"
+      ></app-customer-siderbar>
+    </div>
+
+    <div class="col-7" [ngClass]="!id || isLoading ? 'no-content' : ''">
+      <div class="loader" *ngIf="isLoading">
+        <!-- 
+      *  ==============================
+      *  We are showing Spinner if user has selected different customer
+      *  ==============================
+       -->
+        <img src="assets/spinner.svg" width="100px" />
+      </div>
+
+      <!-- 
+      *  ==============================
+      *  Page refresh and when user haven't not selected the customer
+      *  ==============================
+       -->
+      <div *ngIf="!id && !isLoading">You have not select any customer</div>
+
+      <div *ngIf="id && !isLoading">
+        <!-- 
+      *  ==============================
+      *  We are showing the customer's detail by selecting the customer from left sidebar
+      *  ==============================
+       -->
+        <app-email-addresses [customer]="customer"></app-email-addresses>
+      </div>
+    </div>
+  </div>
+</div>

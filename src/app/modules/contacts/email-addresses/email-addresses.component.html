@@ -1,0 +1,116 @@
+  <!--
+   *  ==============================
+   *  We are showing email and contact details of selected customer by getting the records from JSON placeholder
+   *  We used svg's to show icons
+   *  ==============================
+   -->
+<div class="content">
+  <div class="customer d-flex">
+    <div class="col-2"></div>
+    <div class="col-10 d-flex">
+      <div>
+        <img src="assets/images/johanna.svg" />
+      </div>
+      <div class="ps-4">
+        <div class="username">{{ customer.name }}</div>
+        <div class="userrole">{{ customer.name }}</div>
+        <div class="userrole">
+          {{ customer.address.suite }}, {{ customer.address.street }},
+          {{ customer.address.city }}
+        </div>
+        <div class="d-flex mt-4">
+          <button>
+            <img src="assets/icons/commentButtonIcon.svg" />
+            <span> Message </span>
+          </button>
+          <div class="icon-border ms-2">
+            <img src="assets/icons/phone.svg" />
+          </div>
+          <div class="icon-border ms-2">
+            <img src="assets/icons/attach.svg" />
+          </div>
+          <div class="icon-border ms-2">
+            <img src="assets/icons/ellipses.svg" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="customer pt-5">
+    <div class="d-flex">
+      <div class="col-2 title">Bio</div>
+      <div class="col-8 description">
+        {{ customer.company.name }}, {{ customer.company.bs }},
+        {{ customer.company.catchPhrase }}
+      </div>
+    </div>
+
+    <div class="d-flex mt-4">
+      <div class="col-2 title">Email</div>
+      <!--
+   *  ==============================
+   *  Here we are showing Single email because in MOCK data we don't have multiple emails
+      BUT if in case if we have multiple emails so we just need to loop the emails array and show email and
+      for primary email we just need to use boolean for Primary email which can be isPrimary
+   *  ==============================
+   -->
+      <div class="col-8 description">{{ customer.email }}</div>
+      <div class="label">
+        <span>Primary</span>
+      </div>
+    </div>
+
+    <div class="d-flex mt-4">
+      <div class="col-2 title">Dial</div>
+      <div class="col-8 description">{{ customer.email }}</div>
+    </div>
+
+    <div class="d-flex mt-4">
+      <div class="col-2 title">Meeting</div>
+      <div class="col-8 description">{{ customer.website }}</div>
+    </div>
+
+    <div class="d-flex mt-4">
+      <!--
+   *  ==============================
+   *  SAME as for email. We have only one phone number in mock api 
+   *  ==============================
+   -->
+      <div class="col-2 title">Phone</div>
+      <div class="col-8 description">
+        <div>{{ customer.phone }}</div>
+      </div>
+
+      <div class="label">
+        <span>Primary</span>
+      </div>
+    </div>
+
+    <div class="d-flex mt-4">
+      <div class="col-2 title flex-end-center">Social</div>
+      <!--
+   *  ==============================
+   *  Here we are showing footer buttons for social media (CURRENTLY they are not functional (AS ITS NOT REQUIRED))
+   *  ==============================
+   -->
+      <div class="col-8 description d-flex">
+        <div class="icon-border ms-2">
+          <img src="assets/icons/facebook.svg" />
+        </div>
+        <div class="icon-border ms-2">
+          <img src="assets/icons/pinterest.svg" />
+        </div>
+        <div class="icon-border ms-2">
+          <img src="assets/icons/twitter.svg" />
+        </div>
+        <div class="icon-border ms-2">
+          <img src="assets/icons/linkedIn.svg" />
+        </div>
+        <div class="icon-border ms-2">
+          <img src="assets/icons/google.svg" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

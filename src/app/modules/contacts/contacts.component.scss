@@ -1,0 +1,18 @@
+@import '../../../scss/variables';
+
+/*
+     *  ==============================
+     *  We are displaying no customer selected
+     *  ==============================
+     */
+.contact-page {
+    .no-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 21px;
+        color: $primary-color;
+    }
+}

@@ -1,0 +1,95 @@
+// app.component.scss
+@import '../../../../scss/variables';
+
+.header {
+    font-weight: 700;
+    font-size: 20px;
+    color: $title-color;
+    display: flex;
+    align-items: center;
+}
+
+.contact-section {
+    overflow-y: auto;
+    max-height: 700px;
+    overflow-x: hidden;
+    background-color: $bg-color;
+}
+
+.border-b {
+    border-bottom: 1px solid $border-gray;
+    ;
+}
+
+/*
+   *  ==============================
+   *  Here we are using styles for displaying Search Section in customer sidepanel
+   *  ==============================
+   */
+.search-section {
+    padding: 30px 30px 10px 30px !important;
+
+    .search-text {
+        font-weight: 400;
+        font-size: 14px;
+        color: $primary-color;
+    }
+
+    .search-by {
+        font-weight: 700;
+        font-size: 16px;
+        color: $title-color;
+        background: transparent;
+        border: none;
+        width: 300px;
+
+        &:focus,
+        &:active {
+            border: none;
+            outline: none;
+        }
+    }
+
+    ::placeholder {
+        font-weight: 700;
+        font-size: 16px;
+        color: $title-color;
+    }
+
+}
+
+/*
+   *  ==============================
+   *  Here we are using styles for displaying customers from sidepanel
+   *  ==============================
+   */
+.customer-section {
+    padding: 0px 20px 30px 30px !important;
+
+    .customer {
+        cursor: pointer;
+
+        .name {
+            font-weight: 700;
+            font-size: 14px;
+            color: $title-color;
+        }
+
+        .role {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            color: $primary-color;
+        }
+
+        .selected-customer{
+            color: $button-color !important;
+        }
+
+        &:hover {
+            border-bottom: 1px solid $border-gray;
+            padding-bottom: 5px;
+        }
+    }
+
+}

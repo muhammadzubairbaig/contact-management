@@ -1,0 +1,130 @@
+<!--
+   *  ==============================
+   *  We are showing customer's left side panel
+   *  We used svg's to show icons
+   *  ==============================
+   -->
+<div class="row">
+  <div class="col-12 contact-section ps-4 pt-2">
+    <div class="row border-b p-3">
+      <div class="col-6 d-flex">
+        <div class="icon-border">
+          <img src="assets/icons/menu.svg" />
+        </div>
+
+        <div class="header mx-2">Contacts</div>
+      </div>
+      <div class="col-6 flex-end-center">
+        <div class="icon-border me-2">
+          <img src="assets/icons/leftChevron.svg" />
+        </div>
+        <div class="icon-border me-2">
+          <img src="assets/icons/rightChevron.svg" />
+        </div>
+      </div>
+    </div>
+
+    <div class="search-section flex-between-center">
+      <div>
+        <!-- 
+          *  ==============================
+          *  As we don't have same export icons so i have used the svg to show icons or selected icons
+          *  ==============================
+          -->
+        <p class="search-text">Search for a contact</p>
+        <!-- 
+          *  ==============================
+          *  Text will become in to input if user has clicked once to search any customer
+          CURRENTLY its not functional as its not requirement
+          *  ==============================
+          -->
+        <input
+          type="text"
+          class="search-by"
+          *ngIf="isTyping"
+          maxlength="30"
+          placeholder="Name, email or phone number"
+        />
+        <p class="search-by" *ngIf="!isTyping" (click)="isTyping = !isTyping">
+          Name, email or phone number
+        </p>
+      </div>
+
+      <div>
+        <img src="assets/icons/search.svg" />
+      </div>
+    </div>
+
+    <div class="customer-section">
+      <div
+        *ngFor="let customer of customers"
+        class="customer flex-between-center mt-3"
+        (click)="handleSelectCustomer(customer.id)"
+      >
+        <div class="d-flex">
+          <div>
+            <img src="assets/images/nicholas.svg" />
+          </div>
+          <div class="ps-3">
+            <!-- 
+          *  ==============================
+          *  Here we are changing the color name if customer is selected
+          *  ==============================
+          -->
+            <div
+              class="name"
+              [ngClass]="id === customer.id ? 'selected-customer' : ''"
+            >
+              {{ customer.name }}
+            </div>
+            <div
+              class="role"
+              [ngClass]="id === customer.id ? 'selected-customer' : ''"
+            >
+              <!-- 
+          *  ==============================
+          *  As we don't have ROLE in JSON placeholder so we are displaying username of the customer
+          *  ==============================
+          -->
+              {{ customer.username }}
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex">
+          <!-- 
+          *  ==============================
+          *  As we don't have same export icons so i have used the svg to show icons or selected icons
+          *  ==============================
+          -->
+          <div class="icon-border ms-2">
+            <img src="assets/icons/comment.svg" *ngIf="id !== customer.id" />
+            <!-- 
+          *  ==============================
+          *  If customer is selected the icon will change to new svg and it show selected icon
+          *  ==============================
+          -->
+            <img
+              src="assets/icons/selectedComment.svg"
+              *ngIf="id === customer.id"
+            />
+          </div>
+          <div class="icon-border ms-2">
+            <img src="assets/icons/phone.svg" *ngIf="id !== customer.id" />
+            <img
+              src="assets/icons/selectedPhone.svg"
+              *ngIf="id === customer.id"
+            />
+          </div>
+          <div class="icon-border ms-2">
+            <img src="assets/icons/ellipses.svg" *ngIf="id !== customer.id" />
+            <img
+              src="assets/icons/selectedEllipses.svg"
+              *ngIf="id === customer.id"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+@import './shared/display';
+@import './variables';
+@import "~bootstrap/dist/css/bootstrap.css";
+
+body {
+  font-family: 'Lato', sans-serif;
+overflow: hidden;
+height: 100vh;
+}
+
+/*
+   *  ==============================
+   *  We are using this class multiple times in our application
+   *  ==============================
+   */
+.icon-border {
+  background: $white;
+  border: 1px solid $border-gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+
+  fa-icon {
+    text-align: center;
+    color: $primary-color;
+  }
+}

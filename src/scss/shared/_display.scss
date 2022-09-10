@@ -1,0 +1,129 @@
+// =======================
+//        Flex
+// =======================
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .flex-row {
+    display: flex;
+  }
+  
+  .flex-between {
+    justify-content: space-between;
+  }
+  
+  .flex-center {
+    align-items: center;
+  }
+  
+  .flex-center-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .flex-between-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .flex-between-start {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .flex-start {
+    display: flex;
+    align-self: flex-start;
+  }
+  
+  .flex-center-end {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  
+  .flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .flex-start-center {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  .flex-center-start {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .flex-end-center {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .flex-end-start {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+  
+  .flex-start-end {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+  
+  .flex-between-end {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  
+  .flex-around-end {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+  }
+  
+  .flex-start-around {
+    display: flex;
+    justify-content: flex-start;
+    align-items: space-around;
+  }
+  
+  .flex-around-center {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .flex-column {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .flex-row {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .flex-start-start {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  
+  .flex-self-start {
+    display: flex;
+    align-self: flex-start;
+  }
